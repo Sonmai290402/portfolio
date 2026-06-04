@@ -24,10 +24,10 @@ export const metadata: Metadata = {
     description: "Son Mai's Portfolio",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://portfolio-sonmai.vercel.app/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Son Mai's Portfolio og image og image",
+        alt: "Son Mai's Portfolio",
       },
     ],
   },
