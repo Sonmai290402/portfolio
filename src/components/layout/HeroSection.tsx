@@ -38,13 +38,11 @@ const HeroSection = () => {
             Mai The Son
           </span>
         </h1>
-        <p className="text-muted-foreground text-base leading-relaxed max-w-md">
-          I craft performant, accessible web experiences — from pixel-perfect
-          interfaces to robust back-end systems. Focused on clean code and
-          meaningful products.
-        </p>
+        <h2 className="text-2xl font-bold tracking-tight leading-tight text-primary">
+          Frontend Developer
+        </h2>
         <Button variant="default" size="lg" className="w-fit px-10 py-6">
-          See My Work
+          See My Projects
           <ArrowRight className="size-4" />
         </Button>
       </div>
