@@ -30,6 +30,8 @@ export const metadata: Metadata = {
         alt: "Son Mai's Portfolio",
       },
     ],
+    locale: "en_US",
+    type: "website",
   },
 };
 
