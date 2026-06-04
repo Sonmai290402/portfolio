@@ -18,6 +18,15 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Son Mai's Portfolio",
   description: "Son Mai's Portfolio",
+  openGraph: {
+    title: "Son Mai's Portfolio",
+    description: "Son Mai's Portfolio",
+    images: [
+      {
+        url: "/og-image.jpg",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
