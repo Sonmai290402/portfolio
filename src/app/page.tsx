@@ -7,8 +7,8 @@ export default function Home() {
     <div className="min-h-full flex flex-col items-center">
       <NavBar />
       <HeroSection />
-      <div className="absolute top-0 left-0 w-full h-full">
-        <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
+      <div className="absolute inset-0 w-1/2 top-0 left-0 z-0">
+        <Lanyard position={[4, 0, 15]} gravity={[0, -40, 0]} />
       </div>
     </div>
   );
