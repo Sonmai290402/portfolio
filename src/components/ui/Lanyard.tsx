@@ -23,6 +23,13 @@ import * as THREE from "three";
 
 extend({ MeshLineGeometry, MeshLineMaterial });
 
+declare module "@react-three/fiber" {
+  interface ThreeElements {
+    meshLineGeometry: object;
+    meshLineMaterial: object;
+  }
+}
+
 interface LanyardProps {
   position?: [number, number, number];
   gravity?: [number, number, number];
