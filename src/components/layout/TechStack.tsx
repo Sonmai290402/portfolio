@@ -6,9 +6,10 @@ import { RiNextjsFill } from "react-icons/ri";
 import { BsTypescript } from "react-icons/bs";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiDocker, SiFigma, SiGit, SiRedux } from "react-icons/si";
-import { IoLogoFirebase } from "react-icons/io5";
+import { IoLogoFirebase, IoPlanet } from "react-icons/io5";
 import { BsClaude } from "react-icons/bs";
 import ZustandIcon from "../icons/ZustandIcon";
+import GradientText from "../ui/GradientText";
 
 const FRONTEND_TECHNOLOGIES = [
   { node: <FaReact />, title: "React", href: "https://react.dev" },
@@ -66,6 +67,17 @@ const TOOL_TECHNOLOGIES = [
 const TechStack = () => {
   return (
     <div className="w-full max-w-[1440px] h-screen relative flex flex-col gap-10 items-center justify-center">
+      <div className="flex items-center gap-2">
+        <IoPlanet size={28} className="text-primary" />
+        <GradientText
+          colors={["#ffffff", "#a78bfa", "#6c6eff"]}
+          animationSpeed={4}
+          showBorder={false}
+          className="text-2xl font-bold tracking-tight leading-tight"
+        >
+          Tech Stack
+        </GradientText>
+      </div>
       <div className="px-32 w-full">
         <LogoLoop
           logos={FRONTEND_TECHNOLOGIES}

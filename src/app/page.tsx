@@ -4,6 +4,7 @@ import HeroSection from "@/components/layout/HeroSection";
 import NavBar from "@/components/layout/NavBar";
 import TechStack from "@/components/layout/TechStack";
 import Lanyard from "@/components/ui/Lanyard";
+import AboutMe from "@/components/layout/AboutMe";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <Lanyard position={[4, 0, 15]} gravity={[0, -40, 0]} />
       </div>
       <HeroSection />
+      <AboutMe />
       <TechStack />
       <FeaturedProjects />
       <Footer />

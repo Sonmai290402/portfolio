@@ -3,6 +3,7 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "../ui/button";
 import Galaxy from "../ui/galaxy";
+import { IoIosRocket } from "react-icons/io";
 
 const HeroSection = () => {
   return (
@@ -41,10 +42,17 @@ const HeroSection = () => {
         <h2 className="text-2xl font-bold tracking-tight leading-tight text-primary">
           Frontend Developer
         </h2>
-        <Button variant="default" size="lg" className="w-fit px-10 py-6">
-          See My Projects
-          <ArrowRight className="size-4" />
-        </Button>
+        <p className="text-muted-foreground text-base tracking-widest">
+          I craft clean, thoughtful, and engaging digital experiences.
+        </p>
+        <button className="gradient-button w-fit px-10 py-6">
+          <div className="gradient-button-blob1"></div>
+          <div className="gradient-button-blob2"></div>
+          <div className="gradient-button-inner flex items-center gap-2">
+            <IoIosRocket size={20} className="text-primary" />
+            <span className="text-sm">See About Me</span>
+          </div>
+        </button>
       </div>
     </div>
   );
