@@ -3,6 +3,28 @@
 import Image from "next/image";
 import { IoIosPlanet, IoIosRocket } from "react-icons/io";
 import GradientText from "../ui/GradientText";
+import { Badge } from "../ui/badge";
+
+const MAIN_TECHNOLOGIES = [
+  {
+    label: "React",
+  },
+  {
+    label: "Next.js",
+  },
+  {
+    label: "TypeScript",
+  },
+  {
+    label: "Tailwind CSS",
+  },
+  {
+    label: "Zustand",
+  },
+  {
+    label: "Responsive Design",
+  },
+];
 
 const AboutMe = () => {
   return (
@@ -55,6 +77,14 @@ const AboutMe = () => {
               modern landing pages. Each project helps me improve the way I
               think about user experience, structure, and product quality.
             </p>
+          </div>
+
+          <div className="flex flex-wrap gap-2">
+            {MAIN_TECHNOLOGIES.map((technology) => (
+              <Badge variant={"outline"} key={technology.label}>
+                {technology.label}
+              </Badge>
+            ))}
           </div>
 
           <button className="gradient-button w-fit px-10 py-6">

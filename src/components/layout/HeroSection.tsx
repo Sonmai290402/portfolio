@@ -7,7 +7,7 @@ import { IoIosRocket } from "react-icons/io";
 
 const HeroSection = () => {
   return (
-    <div className="w-full h-screen relative flex items-center justify-center">
+    <div id="home" className="w-full h-screen relative flex items-center justify-center">
       <div className="w-full h-full absolute inset-0">
         <Galaxy
           mouseRepulsion

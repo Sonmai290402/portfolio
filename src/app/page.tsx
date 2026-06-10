@@ -5,6 +5,8 @@ import NavBar from "@/components/layout/NavBar";
 import TechStack from "@/components/layout/TechStack";
 import Lanyard from "@/components/ui/Lanyard";
 import AboutMe from "@/components/layout/AboutMe";
+import Experience from "@/components/layout/Experience";
+import Contact from "@/components/layout/Contact";
 
 export default function Home() {
   return (
@@ -16,7 +18,9 @@ export default function Home() {
       <HeroSection />
       <AboutMe />
       <TechStack />
+      <Experience />
       <FeaturedProjects />
+      <Contact />
       <Footer />
     </div>
   );
