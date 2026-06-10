@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="min-h-full flex flex-col items-center">
       <NavBar />
-      <div className="absolute inset-0 w-1/2 top-0 left-0 z-50">
+      <div className="hidden md:block absolute inset-0 w-1/2 top-0 left-0 z-50">
         <Lanyard position={[4, 0, 15]} gravity={[0, -40, 0]} />
       </div>
       <HeroSection />

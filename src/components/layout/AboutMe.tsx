@@ -87,7 +87,10 @@ const AboutMe = () => {
             ))}
           </div>
 
-          <button className="gradient-button w-fit px-10 py-6">
+          <button
+            className="gradient-button w-fit px-10 py-6 mx-auto md:mx-0"
+            onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
+          >
             <div className="gradient-button-blob1" />
             <div className="gradient-button-blob2" />
 

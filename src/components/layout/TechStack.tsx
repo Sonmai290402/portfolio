@@ -25,7 +25,7 @@ const FRONTEND_TECHNOLOGIES = [
     href: "https://tailwindcss.com",
   },
   {
-    node: <ZustandIcon width={60} height={60} />,
+    node: <ZustandIcon />,
     title: "Zustand",
     href: "https://zustand.docs.pmnd.rs/learn/getting-started/introduction",
   },
@@ -64,9 +64,11 @@ const TOOL_TECHNOLOGIES = [
   },
 ];
 
+const ALL_TECHNOLOGIES = [...FRONTEND_TECHNOLOGIES, ...TOOL_TECHNOLOGIES];
+
 const TechStack = () => {
   return (
-    <div className="w-full max-w-7xl px-16 py-16 relative flex flex-col gap-10 items-center justify-center">
+    <div className="w-full max-w-7xl px-6 sm:px-16 py-16 relative flex flex-col gap-10 items-center justify-center">
       <div className="flex items-center gap-2">
         <IoPlanet size={28} className="text-primary" />
         <GradientText
@@ -78,7 +80,25 @@ const TechStack = () => {
           Tech Stack
         </GradientText>
       </div>
-      <div className="px-32 w-full">
+
+      {/* Mobile: static grid */}
+      <div className="grid grid-cols-4 gap-6 w-full md:hidden">
+        {ALL_TECHNOLOGIES.map((tech) => (
+          <a
+            key={tech.title}
+            href={tech.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center gap-2  hover:text-primary transition-colors"
+          >
+            <span className="text-4xl">{tech.node}</span>
+            <span className="text-xs text-center">{tech.title}</span>
+          </a>
+        ))}
+      </div>
+
+      {/* Desktop: animated LogoLoop */}
+      <div className="hidden md:block px-32 w-full">
         <LogoLoop
           logos={FRONTEND_TECHNOLOGIES}
           speed={100}
@@ -90,7 +110,7 @@ const TechStack = () => {
           ariaLabel="Technology Stacks"
         />
       </div>
-      <div className="px-48 w-full">
+      <div className="hidden md:block px-48 w-full">
         <LogoLoop
           logos={TOOL_TECHNOLOGIES}
           speed={100}

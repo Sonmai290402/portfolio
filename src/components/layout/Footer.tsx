@@ -27,7 +27,7 @@ const CONTACT_ITEMS = [
 
 const Footer = () => {
   return (
-    <div className="w-full max-w-7xl px-16 border-t border-border flex flex-col gap-6 items-center justify-center py-8">
+    <div className="w-full max-w-7xl px-6 sm:px-16 border-t border-border flex flex-col gap-6 items-center justify-center py-8">
       {/* <div className="flex flex-col gap-2 items-center justify-center">
         <p className="text-sm text-muted-foreground">Contact me via</p>
         <div className="flex gap-4">

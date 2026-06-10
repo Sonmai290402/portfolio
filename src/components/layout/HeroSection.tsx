@@ -1,7 +1,5 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
-import { Button } from "../ui/button";
 import Galaxy from "../ui/galaxy";
 import { IoIosRocket } from "react-icons/io";
 
@@ -24,11 +22,11 @@ const HeroSection = () => {
           speed={1}
         />
       </div>
-      <div className="max-w-7xl px-16 w-1/2 ml-auto z-10 flex flex-col justify-center gap-6 px-12 xl:px-20 py-8">
-        <p className="text-muted-foreground text-base tracking-widest uppercase">
+      <div className="z-10 flex flex-col items-center text-center gap-6 px-6 w-full md:w-1/2 md:ml-auto md:items-start md:text-left md:px-12 xl:px-20 md:py-8">
+        <p className="text-muted-foreground text-sm sm:text-base tracking-widest uppercase">
           Hello, I&apos;m
         </p>
-        <h1 className="text-5xl xl:text-6xl font-bold tracking-tight leading-tight">
+        <h1 className="text-4xl sm:text-5xl xl:text-6xl font-bold tracking-tight leading-tight">
           <span
             className="bg-clip-text text-transparent"
             style={{
@@ -39,13 +37,16 @@ const HeroSection = () => {
             Mai The Son
           </span>
         </h1>
-        <h2 className="text-2xl font-bold tracking-tight leading-tight text-primary">
+        <h2 className="text-xl sm:text-2xl font-bold tracking-tight leading-tight text-primary">
           Frontend Developer
         </h2>
-        <p className="text-muted-foreground text-base tracking-widest">
+        <p className="text-muted-foreground text-sm sm:text-base tracking-widest">
           I craft clean, thoughtful, and engaging digital experiences.
         </p>
-        <button className="gradient-button w-fit px-10 py-6">
+        <button
+          className="gradient-button w-fit px-10 py-6"
+          onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
+        >
           <div className="gradient-button-blob1"></div>
           <div className="gradient-button-blob2"></div>
           <div className="gradient-button-inner flex items-center gap-2">

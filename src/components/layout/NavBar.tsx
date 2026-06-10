@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
+import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 
 const NAV_ITEMS = [
   { label: "Home", href: "#home", id: "home" },
@@ -13,6 +14,7 @@ const NAV_ITEMS = [
 
 const NavBar = () => {
   const [activeSection, setActiveSection] = useState("home");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -38,6 +40,7 @@ const NavBar = () => {
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
+    setMenuOpen(false);
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: "smooth" });
@@ -45,21 +48,54 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="bg-white/10 backdrop-blur-sm flex lg:gap-10 py-4 lg:px-10 rounded-full gap-6 px-6 fixed top-4 left-1/2 -translate-x-1/2 z-100">
-      {NAV_ITEMS.map((item) => (
-        <a
-          key={item.label}
-          href={item.href}
-          onClick={(e) => handleClick(e, item.id)}
-          className={cn(
-            "text-white/80 hover:text-primary transition-colors cursor-pointer text-sm",
-            activeSection === item.id && "text-primary font-semibold",
-          )}
+    <>
+      {/* Desktop nav */}
+      <nav className="hidden md:flex bg-white/10 backdrop-blur-sm lg:gap-10 py-4 lg:px-10 rounded-full gap-6 px-6 fixed top-4 left-1/2 -translate-x-1/2 z-100">
+        {NAV_ITEMS.map((item) => (
+          <a
+            key={item.label}
+            href={item.href}
+            onClick={(e) => handleClick(e, item.id)}
+            className={cn(
+              "text-white/80 hover:text-primary transition-colors cursor-pointer text-sm",
+              activeSection === item.id && "text-primary font-semibold",
+            )}
+          >
+            {item.label}
+          </a>
+        ))}
+      </nav>
+
+      {/* Mobile nav */}
+      <div className="md:hidden fixed top-4 right-4 z-100">
+        <button
+          onClick={() => setMenuOpen((prev) => !prev)}
+          className="bg-white/10 backdrop-blur-sm p-3 rounded-full text-white/80 hover:text-primary transition-colors"
+          aria-label="Toggle menu"
         >
-          {item.label}
-        </a>
-      ))}
-    </nav>
+          {menuOpen ? <RiCloseLine size={20} /> : <RiMenu3Line size={20} />}
+        </button>
+
+        {menuOpen && (
+          <div className="absolute top-14 right-0 bg-black/80 backdrop-blur-md rounded-2xl py-3 px-2 flex flex-col gap-1 min-w-40 border border-white/10">
+            {NAV_ITEMS.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                onClick={(e) => handleClick(e, item.id)}
+                className={cn(
+                  "text-white/70 hover:text-primary transition-colors cursor-pointer text-sm px-4 py-2 rounded-xl hover:bg-white/5",
+                  activeSection === item.id &&
+                    "text-primary font-semibold bg-white/5",
+                )}
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+    </>
   );
 };
 
