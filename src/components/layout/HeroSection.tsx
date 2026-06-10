@@ -24,7 +24,7 @@ const HeroSection = () => {
           speed={1}
         />
       </div>
-      <div className="max-w-[1440px] w-1/2 ml-auto z-10 flex flex-col justify-center gap-6 px-12 xl:px-20 py-8">
+      <div className="max-w-7xl px-16 w-1/2 ml-auto z-10 flex flex-col justify-center gap-6 px-12 xl:px-20 py-8">
         <p className="text-muted-foreground text-base tracking-widest uppercase">
           Hello, I&apos;m
         </p>

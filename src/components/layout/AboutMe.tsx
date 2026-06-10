@@ -2,13 +2,11 @@
 
 import { IoIosPlanet } from "react-icons/io";
 import GradientText from "../ui/GradientText";
-import { Button } from "../ui/button";
-import { ArrowRight } from "lucide-react";
 import { IoIosRocket } from "react-icons/io";
 
 const AboutMe = () => {
   return (
-    <div className="w-full max-w-[1440px] h-screen relative flex flex-col gap-10">
+    <div className="w-full max-w-7xl px-16 h-screen relative flex flex-col gap-10">
       <div className="flex items-center gap-2">
         <IoIosPlanet size={28} className="text-primary" />
         <GradientText
