@@ -152,6 +152,8 @@
       BlinkMacSystemFont,
       "Segoe UI",
       sans-serif;
+
+    cursor: url("/rocket.png"), auto;
   }
 }
 
